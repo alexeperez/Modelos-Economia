@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\rule[1mm]{162mm}{0.20mm}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_epn.png}
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{100mm}
+\begin{center}
+\vspace{0.5cm}
+\textsf{\textbf{\large ESCUELA POLITÉCNICA NACIONAL}}\\
+\textsf{\textbf{\small FACULTAD DE CIENCIAS}}\\
+\textsf{\textbf{\small MODELOS EN ECONOMIA}}\\
+\textsf{\textbf{\small DEBER 02}}\\
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_fc.png}
+\end{center}
+\end{minipage}\\
+
+\rule[1mm]{162mm}{0.20mm}
+\begin{flushright}
+{\sf \small Fecha de entrega: 2015/10/07}
+\end{flushright}
+
+\begin{center}
+\textsf{\textbf{\small EJERCICIOS}}
+\end{center}
+
+
+\begin{enumerate}
+% Ejercicio 01
+\item[\bf{1.}] Se requiere estudiar la relación entre el desgaste del hierro dulce y la
+viscosidad del aceite:
+
+\begin{table}[h]
+\centering
+\resizebox{10cm}{!} {
+\begin{tabular}{ c || c c c c c c c c c c}
+     \hline
+Variable& \multicolumn{9}{c} {Observaciones} & Total \\ \hline
+X& 1,6& 9,4& 15,5& 20& 22& 35,5& 43& 40,5& 33& 220,5\\ \hline
+Y& 240& 181& 193& 155& 172& 110& 150& 75& 94& 1370 \\ \hline
+\end{tabular}
+}
+\end{table}
+
+Con el propósito de facilitar los calculos, se presentran a continuación ciertas sumas parciales:
+\begin{equation*}
+S_{xx}=1651,42  \hspace{1.5cm} S_{xy}=-5109,6  \hspace{1.5cm} S_{xy}=21735,56
+\end{equation*}
+
+\begin{enumerate}
+\item[\bf{a.}] Encuentre la recta de regresión.
+\item[\bf{b.}] Interprete, en función del objetivo, la recta obtenida (coeficientes).
+\item[\bf{c.}] Calcule el coeficiente $R^2$. ?`Cómo interpreta dicho coeficiente?
+\item[\bf{d.}] Calcule la razón $F$, compare con el fractil de orden $1-\alpha=0,95$ de la distribución $F$, $F_{(1,n-2)}(\alpha)=5,1174$. ?`Qué puede
+concluir con respecto a la significancia de la regresión?
+
+\item[\bf{e.}] Encuentre intervalos de confianza de nivel $95\%$ para los
+parámetros de la regresión. Considere el fractil de orden $1-\frac{\alpha}
+{2}=0,975$ de la distribución $t$, $t_{(n-2)}(\alpha/2)=2,3646$.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

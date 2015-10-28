@@ -1,0 +1,74 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\rule[1mm]{162mm}{0.20mm}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_epn.png}
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{100mm}
+\begin{center}
+\vspace{0.5cm}
+\textsf{\textbf{\large ESCUELA POLITÉCNICA NACIONAL}}\\
+\textsf{\textbf{\small FACULTAD DE CIENCIAS}}\\
+\textsf{\textbf{\small MODELOS EN ECONOMIA}}\\
+\textsf{\textbf{\small DEBER 01}}\\
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_fc.png}
+\end{center}
+\end{minipage}\\
+
+\rule[1mm]{162mm}{0.20mm}
+\begin{flushright}
+{\sf \small Fecha entrega: 2015/10/04}
+\end{flushright}
+
+\begin{center}
+\textsf{\textbf{\small EJERCICIOS}}
+\end{center}
+
+
+\begin{enumerate}
+\item[\bf{1.}] Minimizar la función:
+
+\begin{equation*}
+SRC(b_1, b_2)= \sum^{n}_{i=1}(y_i-b_1x_i-b_2x_i)^2
+\end{equation*}
+
+\item[\bf{2.}] Demostrar:
+
+\begin{equation*}
+\sum^{n}_{i=1} x_i \hat{u}_i=0
+\end{equation*}
+
+\item[\bf{3.}] Demuestre que si el modelo incluye término constante o si no incluye términno constante pero $\bar{y}=0$ entonces $STC=SEC+SRC$.
+
+\end{enumerate}
+
+\end{document}

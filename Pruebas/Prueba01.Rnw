@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\rule[1mm]{162mm}{0.20mm}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_epn.png}
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{100mm}
+\begin{center}
+\vspace{0.5cm}
+\textsf{\textbf{\large ESCUELA POLITÉCNICA NACIONAL}}\\
+\textsf{\textbf{\small FACULTAD DE CIENCIAS}}\\
+\textsf{\textbf{\small MODELOS EN ECONOMÍA}}\\
+\textsf{\textbf{\small PRUEBA 01}}\\
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_fc.png}
+\end{center}
+\end{minipage}\\
+
+\rule[1mm]{162mm}{0.20mm}
+\begin{flushright}
+{\sf \small Duración: 1.75 horas}
+\end{flushright}
+
+\begin{center}
+\textsf{\textbf{\small PROBLEMAS}}
+\end{center}
+
+
+\begin{enumerate}
+\item[\bf{1.}] Las calificaciones de un grupo de 9 estudiantes en un trabajo de mitad de curso
+($X$) y en el examen final ($Y$) son las siguientes:
+
+\begin{table}[h]
+\centering
+\resizebox{9cm}{!} {
+%\begin{center}
+\begin{tabular}{ c || c c c c c c c c c }
+     \hline
+Variable& \multicolumn{9}{c} {Observaciones}\\ \hline
+X& 77& 50& 71& 72& 81& 94& 96& 99& 67\\ \hline
+Y& 82& 66& 78& 34& 47& 85& 99& 99& 68\\ \hline
+\end{tabular}
+%\end{center}
+}
+          %\caption{Observaciones Y vs X.}
+          %\label{tab:obs}
+\end{table}
+
+\begin{enumerate}
+\item[\bf{a.}] Escriba los supuestos en un modelo de regresión lineal simple.
+\item[\bf{b.}] Encuentre la recta de regresión lineal. Interprete, en función del objetivo, la recta obtenida.
+\item[\bf{c.}] Calcule e interprete el coeficiente $R^2$.
+\item[\bf{d.}] Analice la significancia de los coeficientes realizando la prueba de hipótesis 
+correspondiente.
+\item[\bf{e.}] Construya la tabla ANOVA. ?`Qué puede concluir con respecto a la significancia de la regresión a un nivel de confianza de $90\%$.
+\item[\bf{f.}] Encuentre intervalos de confianza de nivel $90\%$ para los parámetros de la regresión.
+\end{enumerate}
+
+% ejercicio 2
+\item[\bf{2.}] Considerando la información disponible en el archivo \code{datos.xlsx}:
+\begin{enumerate}
+\item[\bf{a.}] Calcule la correlación entre $precio\_crudo$ e $interes$.
+\item[\bf{b.}] Realice un gráfico de dispersión de las variables $precio\_crudo$ e $inversion$  
+\item[\bf{c.}] Genere un modelo de regresión lineal múltiple entre $precio\_crudo$ y las variables $interes$	e $inversion$. Interprete los coeficientes obtenidos.
+\item[\bf{d.}] Interprete el $R^2$.
+\item[\bf{e.}] Analice la significancia  de la regresión y de cada uno de los parámetros individuales.
+\item[\bf{f.}] Realice un informe en el cual se detalle cada uno de los pasos empleados en la generación del modelo, las conclusiones y resultados obtenidos.
+\end{enumerate}
+
+
+\begin{center}
+\textsf{\textbf{\small DESCRIPCIÓN DE LA DATA}}
+\end{center}
+
+El archivo \code{datos.xlsx} contiene 12 observaciones anuales (1976 a 1987) de 3 variables:
+\begin{enumerate}		
+\item[\bf{a.}] {\bf $precio\_crudo$:} Precio del barril de crudo en dólares.
+\item[\bf{b.}] {\bf $interes$:} Tasa de interés anual.
+\item[\bf{c.}] {\bf $inversion$:} Inversiones extranjeras en miles de millones de dólares.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

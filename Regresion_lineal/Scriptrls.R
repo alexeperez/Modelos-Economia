@@ -1,3 +1,4 @@
+# prueba 11/10/2015
 #-----------------------------------------------------#
 #               Modelos en Economia
 # Alex E. Pérez 
@@ -5,6 +6,7 @@
 #-----------------------------------------------------#
 
 # directorio de trabajo
+
 setwd("C:/Users/Toshiba/Desktop/Clases EPN/modelos en economia/Modelos-Economia/Regresion_lineal")
 list.files()
 
@@ -13,7 +15,10 @@ install.packages("readxl", dependencies = TRUE)
 library(readxl)
 
 # data_rls_uti.xlsx
-datarls <- read_excel("data_rls_uti.xlsx", sheet = 1, col_names = TRUE, na = "")
+datarls <- read_excel("data_rls_uti.xlsx", 
+                      sheet = 1, 
+                      col_names = TRUE,
+                      na = "")
 View(datarls)
 str(datarls)
 colnames(datarls)
@@ -25,16 +30,20 @@ utilidad <- datarls[,"Utilidad"]
 ventas <- datarls[,"Ventas"]
 
 plot(x = ventas,y = utilidad)
-plot(x = ventas,y = utilidad,main = "Utilidad vs Ventas")
-plot(x = ventas,y = utilidad,main = "Utilidad vs Ventas", pch=16)
-plot(x = ventas,y = utilidad,main = "Utilidad vs Ventas",
-     pch=16, col="blue")
+plot(x = ventas,y = utilidad,
+     main = "Utilidad vs Ventas")
+plot(x = ventas,y = utilidad,
+     main = "Utilidad vs Ventas",
+     pch=16)
+plot(x = ventas,y = utilidad,
+     main = "Utilidad vs Ventas",
+     pch=16, col="green")
 
 # ggplot2
-install.packages(ggplot2, dependencies = TRUE)
+#install.packages("ggplot2", dependencies = TRUE)
 library(ggplot2)
 g <- ggplot(data = NULL, aes(x=ventas, y=utilidad))
-g + geom_point(size=4, color="black")
+g + geom_point(size=4, color="green")
 
 # Correlacion
 cor(x = utilidad, y= ventas)
@@ -44,6 +53,8 @@ cor(x = utilidad, y= ventas)
 
 regs <- lm(utilidad ~ ventas)
 summary(regs)
+qt(0.975,df = 38)
+qf(p = 0.95, df1 = 1,df2 = 38)
 
 # ANOVA
 anovas <- aov(regs)
@@ -73,17 +84,22 @@ g + geom_point(size=3, color="black")+
   geom_smooth(method="lm", color="red")
 
 
-# DEBER
+# DEBER 09/10/2015
 # Ajustar un modelo de regresion lineal simple entre
 # ln(pib) e ln(inflacion) del archivo data_rls_pib.xlsx
-# use la funcion log() para extraer el log natural de una variable
+# use la funcion log() para extraer el log natural de
+# una variable
 
 
 #-----------------------------------------------------#
 #              Regresion lineal multiple
 
 # data_rls_uti.xlsx
-datarlm <- read_excel("data_rlm_pib.xlsx", sheet = 1, col_names = TRUE, na = "")
+library(readxl)
+datarlm <- read_excel("data_rlm_pib.xlsx",
+                      sheet = 1, 
+                      col_names = TRUE,
+                      na = "")
 View(datarlm)
 str(datarlm)
 colnames(datarlm)
@@ -117,8 +133,11 @@ plot(x = ln_ee,y = ln_pib, main = "pib vs ee",
 
 
 regm <- lm(ln_pib ~ ln_infl+ ln_ee)
+dim(datarlm)
+qt(p = 0.975,df = nrow(datarlm)-ncol(datarlm))
 summary(regm)
 
+qf(p = 0.95, df1 = 2, df2 = 47)
 # ANOVA
 anovam <- aov(regm)
 summary(anovam)
@@ -129,7 +148,10 @@ names(regm)
 # Pronosticos o predicciones
 y_t <- regm$fitted.values
 
-datafinal <- data.frame(datarlm,ln_pib, y_t)
+datafinal <- data.frame(datarlm,ln_pib, y_t,
+                        exp(ln_pib),exp(y_t))
 View(datafinal)
 
 
+# intervalos de confianza
+confint(regm, level = 0.95)

@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\rule[1mm]{162mm}{0.20mm}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_epn.png}
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{100mm}
+\begin{center}
+\vspace{0.5cm}
+\textsf{\textbf{\large ESCUELA POLITÉCNICA NACIONAL}}\\
+\textsf{\textbf{\small FACULTAD DE CIENCIAS}}\\
+\textsf{\textbf{\small MODELOS EN ECONOMÍA}}\\
+\textsf{\textbf{\small EXAMEN PARCIAL I}}\\
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_fc.png}
+\end{center}
+\end{minipage}\\
+
+\rule[1mm]{162mm}{0.20mm}
+\begin{flushright}
+{\sf \small Duración: 1.75 horas}
+\end{flushright}
+
+\begin{center}
+\textsf{\textbf{\small PROBLEMAS}}
+\end{center}
+
+
+\begin{enumerate}
+% ejercicio 1
+\item[\bf{1.}] Considerando la información disponible en el archivo \code{DataPoblacion.xlsx}:
+\begin{enumerate}
+\item[\bf{a.}] Calcule el mínimo, media, máximo de la variable $Poblacion$.
+\item[\bf{b.}] Calcule la correlación entre $Poblacion$ y $TasaCrimen$.
+\item[\bf{c.}] Realice un gráfico de dispersión de las variables $Poblacion$ y $Menores18$  
+\item[\bf{d.}] Genere el mejor modelo de regresión lineal múltiple para estimar la $Poblacion$ 
+en función de las variables explicativas disponibles.
+\item[\bf{e.}] En el modelo final obtenido interprete los parámetros estimados y el $R^2$.
+\item[\bf{f.}] Analice la significancia de los parámetros de forma individual.
+\item[\bf{g.}] Encuentre intervalos de cofianza de nivel $96\%$ para para los parámetros de la regresión.
+\item[\bf{h.}] Analice la significancia  de la regresión.
+\item[\bf{i.}] Realice un diagrama de dispersión entre la variable $Poblacion$ y los valores ajustados.
+\item[\bf{j.}] Realice un histograma de color \code{steelblue} para los residuos.
+\item[\bf{k.}] Realice un informe en el cual se detalle cada uno de los pasos empleados en la generación del modelo, las conclusiones y resultados obtenidos.
+\end{enumerate}
+
+
+\begin{center}
+\textsf{\textbf{\small DESCRIPCIÓN DE LA DATA}}
+\end{center}
+
+El archivo \code{DataPoblacion.xlsx} contiene 44 observaciones de 9 variables:
+\begin{enumerate}
+\item[\bf{1:}] {\bf Poblacion:} Número de habitantes en cada sector.
+\item[\bf{2:}] {\bf VarPoblMayor:} Variación en población adulta (en cuanto se
+incremento el número de personas mayores a 65 años)
+\item[\bf{3:}] {\bf Menores18:} Porcentaje de sujetos menores a 18 años en cada
+sector.
+\item[\bf{4.}] {\bf PartAlmzEscl:} Porcentaje de participación en almuerzo escolar.
+\item[\bf{5.}] {\bf VarIngresos:} Variación del ingreso promedio en cada sector.
+\item[\bf{6.}] {\bf TasaCrimen:} Tasa de crimen en cada sector.
+\item[\bf{7.}] {\bf VarTasaCrimen:} Variación de la tasa de crimen en cada sector.
+\item[\bf{8.}] {\bf Region:} Región en la cual se ubica el sector.
+\item[\bf{9.}] {\bf ServBasCompl:} Variable que especifica si el sector dispone
+de todos los servicios básicos.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+%\SweaveOpts{concordance=TRUE}
+\rule[1mm]{162mm}{0.20mm}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_epn.png}
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{100mm}
+\begin{center}
+\vspace{0.5cm}
+\textsf{\textbf{\large ESCUELA POLITÉCNICA NACIONAL}}\\
+\textsf{\textbf{\small FACULTAD DE CIENCIAS}}\\
+\textsf{\textbf{\small MODELOS EN ECONOMÍA}}\\
+\textsf{\textbf{\small PRUEBA PRÁCTICA EN R}}\\
+\end{center}
+\end{minipage}
+\begin{minipage}[d]{30mm}
+\begin{center}
+\includegraphics[scale=.30]{figures/logo_fc.png}
+\end{center}
+\end{minipage}\\
+
+\rule[1mm]{162mm}{0.20mm}
+\begin{flushright}
+{\sf \small Duración: 1,5 horas}
+\end{flushright}
+ 
+\begin{center}
+\textsf{\textbf{\small PROBLEMAS}}
+\end{center}
+
+
+\begin{enumerate}
+\item[\bf{1.}] Genere un script en R, de tal forma que le permita responder a las
+siguientes preguntas:
+
+\begin{enumerate}
+\item[\bf{1.1}] Leer el archivo de datos \code{datosDA.xlsx}.
+\item[\bf{1.2}] Calcular la media de las variables numéricas y generar un data frame con dos columnas, la primera con el nombre de cada variable y la segunda con su respectivo promedio. Las variables deben estar ordenadas de acuerdo a la media descendentemente.
+\item[\bf{1.3}] Calcular la suma de la variable \code{Deuda} en cada una de las categorías de la variable \code{estadocivil}. Generar un data frame con dos columnas, la primera con la categoría y la segunda con su respectiva suma.
+\item[\bf{1.4}] Recodifique los valores pérdidos de la variable \code{Ingreso} con 345 dólares.
+\item[\bf{1.5}] Genere un modelo de regresión lineal simple entre las variables \code{Ingreso} y \code{endeudprom} dentro de cada una de las categorías de la variable \code{Region}. Extraer el $R^2$ de cada modelo y generar un data frame con dos columnas, la primera con la categoría y la segunda con el $R^2$ del respectivo modelo.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
